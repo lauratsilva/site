@@ -1,0 +1,109 @@
+<body>
+<!DOCTYPE	html>
+<html>
+			<head>
+					<meta	charset="utf-8">
+					
+					<title><?php	print $cabecalho_title;	?></title>
+					<link	rel="stylesheet" href="css/reset.css">
+					<link	rel="stylesheet" href="css/estilos.css">
+					<link	rel="stylesheet" href="css/mobile2.css" media="(max-width:	939px)">
+					<link	rel="stylesheet" href="css/produto2.css">
+					<meta	name="viewport" content="width=device-width">
+						<?php	print	@$cabecalho_css;	?>
+			</head>
+					<body>
+					<header	class="container">
+			<h1><img	src="logo2.png" alt="LiLa Babys"></h1>
+			  <p	class="sacola">
+					Nenhum	item	na	sacola	de	compras
+			  </p>
+			      <nav	class="menu-opcoes">
+					 <ul>
+							<li><a	href="#">Sua	Conta</a></li>
+							<li><a	href="#">Lista	de	Desejos</a></li>
+							<li><a	href="#">Cartão	Fidelidade</a></li>
+							<li><a	href="sobre2.php">Sobre</a></li>
+							<li><a	href="#">Ajuda</a></li>
+					 </ul>
+			      </nav>
+     </header>
+		
+						<div	class="container">			
+						<div	class="produto">
+						<img src="produto.png" 
+			 <h1>body natalino</h1>
+			<p>por	apenas	R$	129,00</p>
+		<form	action="checkout.php" method="POST">
+<input	type="hidden" name="nome" value="Body Natalino">
+<input	type="hidden" name="preco" value="129,00">
+							<fieldset	class="tamanhos">
+		<legend>Escolha	o	tamanho:</legend>
+		<input	type="range" min="1" max="5" value="3" step="2" name="tamanho" id="tamanho">
+		<output	for="tamanho" name="valortamanho">3</output>
+</fieldset>
+							<input	type="submit" class="comprar" value="Comprar">
+			</form>
+		
+</div>	
+		<div	class="detalhes">
+		<h2>Detalhes	do	produto</h2>
+			<p>Este é o conjunto de frio de tricô rosa mais adorável que você já viu!
+			Feito com material de alta qualidade, perfeito para manter seu neném aquecido e confortável nos dias mais frios. 
+			O design delicado e a maciez do tricô garantem todo o conforto que seu pequeno precisa.
+			Adquira agora e receba o seu conjunto rapidamente com a nossa entrega expressa!</p>
+									<table>
+					<thead>
+									<tr>
+													<th>Característica</th>
+													<th>Detalhe</th>
+									</tr>
+					</thead>
+					<tbody>
+									<tr>
+													<td>Modelo</td>
+													<td>Body 7845</td>
+									</tr>
+									<tr>
+													<td>Material</td>
+													<td>Algodão	e	poliester</td>
+									</tr>
+									<tr>
+													<td>Cores</td>
+													<td>Única</td>
+									</tr>
+									<tr>
+													<td>Lavagem</td>
+													<td>Lavar	a	mão</td>
+									</tr>
+					</tbody>
+</table>
+					</div>	
+</div>	
+									
+									
+									
+									
+									
+									
+									<footer>
+					<div	class="container">
+							<img	src="logo2.png" alt="Logo	LiLa BaBys">
+							&copy;	Copyright	LiLa Babys
+							<ul	class="social">
+									<li><a	href="http://facebook.com/lilababys">Facebook</a></li>
+									<li><a	href="http://twitter.com/lilababys">Twitter</a></li>
+									<li><a	href="http://plus.google.com/lilababys">Google+</a></li>
+							</ul>
+				</div>
+			</footer>
+<script>
+var	inputTamanho	=	document.querySelector('[name=tamanho]')
+var	outputTamanho	=	document.querySelector('[name=valortamanho]')
+function	mostraTamanho(){
+			outputTamanho.value	=	inputTamanho.value
+			outputTamanho.textContent	=	event.target.value
+}
+inputTamanho.oninput	=	mostraTamanho
+	</script>
+					</body>		
